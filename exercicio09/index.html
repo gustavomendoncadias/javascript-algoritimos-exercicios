@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio09</title>
+</head>
+<body>
+    <script>
+        function calcularPesoIdeal() {
+            var altura = document.getElementById('altura').value;
+            var pesoIdeal = (72.7 * altura) - 58;
+            document.getElementById('pesoIdeal').innerHTML = 'Seu peso ideal é: ' + pesoIdeal + ' kg';
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de Peso Ideal</h2>
+    <p>Digite sua altura em metros:</p>
+    <input type="text" id="altura">
+    <button onclick="calcularPesoIdeal()">Calcular</button>
+    <p id="pesoIdeal"></p>
+</body>
+</html>

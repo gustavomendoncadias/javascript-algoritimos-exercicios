@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio010</title>
+</head>
+<body>
+    <script>
+        function calcularSalario() {
+            var valorHora = document.getElementById('valorHora').value;
+            var horasTrabalhadas = document.getElementById('horasTrabalhadas').value;
+            
+            var salarioBruto = valorHora * horasTrabalhadas;
+            var impostoRenda = salarioBruto * 0.11;
+            var inss = salarioBruto * 0.08;
+            var sindicato = salarioBruto * 0.05;
+            
+            var salarioLiquido = salarioBruto - impostoRenda - inss - sindicato;
+            
+            document.getElementById('salarioBruto').innerHTML = 'Seu salário bruto é: R$' + salarioBruto;
+            document.getElementById('impostoRenda').innerHTML = 'Valor pago ao IR: R$' + impostoRenda;
+            document.getElementById('inss').innerHTML = 'Valor pago ao INSS: R$' + inss;
+            document.getElementById('sindicato').innerHTML = 'Valor pago ao sindicato: R$' + sindicato;
+            document.getElementById('salarioLiquido').innerHTML = 'Seu salário líquido é: R$' + salarioLiquido;
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de Salário</h2>
+    <p>Digite quanto você ganha por hora:</p>
+    <input type="text" id="valorHora">
+    <p>Digite o número de horas trabalhadas no mês:</p>
+    <input type="text" id="horasTrabalhadas">
+    <button onclick="calcularSalario()">Calcular</button>
+    <p id="salarioBruto"></p>
+    <p id="impostoRenda"></p>
+    <p id="inss"></p>
+    <p id="sindicato"></p>
+    <p id="salarioLiquido"></p>
+</body>
+</html>

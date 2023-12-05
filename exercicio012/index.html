@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio012</title>
+</head>
+<body>
+    <script>
+        function verificarValor() {
+            var valor = document.getElementById('valor').value;
+            
+            if (valor > 0) {
+                document.getElementById('mensagem').innerHTML = "O valor é positivo";
+            } else if (valor < 0) {
+                document.getElementById('mensagem').innerHTML = "O valor é negativo";
+            } else {
+                document.getElementById('mensagem').innerHTML = "O valor é zero";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Verificador de Valor</h2>
+    <p>Digite um valor:</p>
+    <input type="text" id="valor">
+    <button onclick="verificarValor()">Verificar</button>
+    <p id="mensagem"></p>
+</body>
+</html>
